@@ -7,7 +7,7 @@ def resultJson = jsonSlurper.parseText(data)
 def id = '"'+resultJson.id+'"'
 def name= '"'+name+'"'
  
- httpRequest authentication: 'jira_password', 
+ httpRequest authentication: 'nexus', 
     customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json'], 
                     [maskValue: false, name: 'Accept', value: 'application/json']], 
     httpMode: 'POST', requestBody: """{
