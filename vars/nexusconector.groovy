@@ -12,7 +12,8 @@ def call()
 httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON', 
     customHeaders: [[maskValue: false, name: 'Accept', value: 'application/json']], 
     httpMode: 'POST', requestBody: """{
-  
+  {
+    data:{
         "repoType": "hosted",
         "id": "id3",
         "name": "repo3",
@@ -21,6 +22,8 @@ httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON',
         "providerRole": "org.sonatype.nexus.proxy.repository.Repository",
         "exposed": true,
         "format": "maven2"
+        }
+   }
         
    
 }""", responseHandle: 'NONE', url: 'http://3.15.18.214:8081/nexus/service/local/repositories'
