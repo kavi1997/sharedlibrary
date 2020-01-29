@@ -6,7 +6,7 @@ def jsonSlurper = new JsonSlurper()
 def resultJson = jsonSlurper.parseText(data)
 def name = resultJson.stage
 
-httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON", 
+httpRequest authentication: 'bamboo', contentType: "APPLICATION_JSON", 
     
     httpMode: 'POST', requestBody: 
   """{
