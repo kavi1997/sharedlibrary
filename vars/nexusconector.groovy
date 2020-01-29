@@ -5,7 +5,7 @@ createRepo(String data){
 def jsonSlurper = new JsonSlurper() 
 def resultJson = jsonSlurper.parseText(data)
 def repoName = resultJson.name
-//def rid = resultJson.id
+def rid = resultJson.id
 //def projUrl = resultJson.url
 httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON', 
     customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']
@@ -14,7 +14,7 @@ httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON',
   {
   "data":{
         "repoType": "hosted",
-        "id": "somerepo2",
+        "id": ${rid},
         "name": ${repoName},
         "repoPolicy": "RELEASE",
         "provider": "maven2",
