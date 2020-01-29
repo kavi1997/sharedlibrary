@@ -8,8 +8,10 @@ def name = resultJson.stage*/
 //def projUrl = resultJson.url
 def call()
 {
-httpRequest authentication: 'bamboo', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
-{
+httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON", 
+    
+    httpMode: 'POST', requestBody: 
+  """{
 "stage":[
 {
 "stage"	:"TestStage",
@@ -21,7 +23,7 @@ httpRequest authentication: 'bamboo', contentType: 'APPLICATION_JSON', customHea
 }
 ]
 
-}""", responseHandle: 'NONE', url: "http://18.220.143.53:8085/rest/api/latest/queue/LAT-WEB"
+}""" ,url: "http://18.220.143.53:8085/rest/api/latest/queue/LAT-WEB"
 }
 }
 /*def call(){
