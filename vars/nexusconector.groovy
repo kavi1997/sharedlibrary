@@ -11,7 +11,7 @@ def  call(){
 httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON", 
     
     httpMode: 'POST', requestBody: 
-  {
+  """{
     	"data":
 	{
 		"repoType": "hosted",
@@ -24,8 +24,7 @@ httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON",
         "format": "maven2"
 	}
         
-   }
-        
+   }""" 
    , responseHandle: 'NONE', url: "http://3.15.18.214:8081/nexus/service/local/repositories"
 }
 /*def call(){
