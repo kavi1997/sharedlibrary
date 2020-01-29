@@ -5,7 +5,7 @@ createProject(String data){
 def jsonSlurper = new JsonSlurper() 
 def resultJson = jsonSlurper.parseText(data)
 def id = '"'+resultJson.id+'"'
-def name= '"'+name+'"'
+def name= '"'+resultJson.name+'"'
  
  httpRequest authentication: 'nexus_cred', 
     customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json'], 
