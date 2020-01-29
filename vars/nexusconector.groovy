@@ -20,6 +20,7 @@ httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON',
         "exposed": true,
         "format": "maven2"
         }
+        }
    
 }""", responseHandle: 'NONE', url: 'http://3.15.18.214:8081/nexus/service/local/repositories'
 }
