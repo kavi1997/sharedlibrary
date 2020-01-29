@@ -4,13 +4,13 @@ import groovy.json.JsonSlurper
 createProject(String data){
 def jsonSlurper = new JsonSlurper() 
 def resultJson = jsonSlurper.parseText(data)
-def id = '"'+resultJson.id+'"'
-def name= '"'+resultJson.name+'"'
+def rid = '"'+resultJson.id+'"'
+def rname= '"'+resultJson.name+'"'
  httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
 {
        "repoType": "hosted",
-        "id": ${id},
-        "name": ${name},
+        "id": ${rid},
+        "name": ${rname},
         "repoPolicy": "RELEASE",
         "provider": "maven2",
         "providerRole": "org.sonatype.nexus.proxy.repository.Repository",
