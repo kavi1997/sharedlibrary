@@ -25,7 +25,6 @@ httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON",
 
 }""" ,url: "http://18.220.143.53:8085/rest/api/latest/queue/LAT-WEB"
 }
-}
 /*def call(){
 def request = libraryResource 'data.json'
 createRepo(request)
