@@ -8,10 +8,12 @@ def repoName = resultJson.name
 //def rid = resultJson.id
 //def projUrl = resultJson.url
 httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON', 
-    customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
-{
-"data":{
-   "repoType": "hosted",
+    customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']
+                   [maskValue: false, name: 'Accept', value: 'application/json']], 
+    httpMode: 'POST', requestBody: """{
+  {
+  "data":{
+        "repoType": "hosted",
         "id": "somerepo2",
         "name": ${repoName},
         "repoPolicy": "RELEASE",
@@ -20,7 +22,7 @@ httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON',
         "exposed": true,
         "format": "maven2"
         }
-        }
+     }
    
 }""", responseHandle: 'NONE', url: 'http://3.15.18.214:8081/nexus/service/local/repositories'
 }
