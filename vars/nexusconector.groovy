@@ -10,11 +10,20 @@ def rid = resultJson.id*/
 def call()
 {
 httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON', 
-    customHeaders: [[maskValue: false, name: 'Accept', value: 'application/json']], 
+    
     httpMode: 'POST', requestBody: """{
   {
-    -d
-    @data.json
+    	"data":
+	{
+		"repoType": "hosted",
+        "id": "id4",
+        "name": "repo4",
+        "repoPolicy": "RELEASE",
+        "provider": "maven2",
+        "providerRole": "org.sonatype.nexus.proxy.repository.Repository",
+        "exposed": true,
+        "format": "maven2"
+	}
         
    }
         
