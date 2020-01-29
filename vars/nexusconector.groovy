@@ -15,8 +15,8 @@ httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON",
     	"data":
 	{
 		"repoType": "hosted",
-        "id": "id9",
-        "name": "repo9",
+        "id": ${rid},
+        "name": ${repoName},
         "repoPolicy": "RELEASE",
         "provider": "maven2",
         "providerRole": "org.sonatype.nexus.proxy.repository.Repository",
