@@ -8,7 +8,7 @@ def repoName = resultJson.name
 def rid = resultJson.id
 //def projUrl = resultJson.url
 httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON', 
-    customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], 
+    customHeaders: [[maskValue: false, name: 'Accept', value: 'application/json']], 
     httpMode: 'POST', requestBody: """{
   {
   "data":{
