@@ -10,7 +10,7 @@ def rid = resultJson.id
 def  call(){
 httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON", 
     
-    httpMode: 'POST', requestBody: """{
+    httpMode: 'POST', requestBody: 
   {
     	"data":
 	{
@@ -26,8 +26,7 @@ httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON",
         
    }
         
-   
-}""", responseHandle: 'NONE', url: "http://3.15.18.214:8081/nexus/service/local/repositories"
+   , responseHandle: 'NONE', url: "http://3.15.18.214:8081/nexus/service/local/repositories"
 }
 /*def call(){
 def request = libraryResource 'data.json'
