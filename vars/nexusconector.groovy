@@ -13,16 +13,9 @@ httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON',
     customHeaders: [[maskValue: false, name: 'Accept', value: 'application/json']], 
     httpMode: 'POST', requestBody: """{
   {
-    data:{
-        "repoType": "hosted",
-        "id": "id3",
-        "name": "repo3",
-        "repoPolicy": "RELEASE",
-        "provider": "maven2",
-        "providerRole": "org.sonatype.nexus.proxy.repository.Repository",
-        "exposed": true,
-        "format": "maven2"
-        }
+    -d
+    @data.json
+        
    }
         
    
