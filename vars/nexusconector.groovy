@@ -10,6 +10,7 @@ def repoName = resultJson.name
 httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON', 
     customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
 {
+"data":{
    "repoType": "hosted",
         "id": "somerepo2",
         "name": ${repoName},
@@ -18,6 +19,7 @@ httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON',
         "providerRole": "org.sonatype.nexus.proxy.repository.Repository",
         "exposed": true,
         "format": "maven2"
+        }
    
 }""", responseHandle: 'NONE', url: 'http://3.15.18.214:8081/nexus/service/local/repositories'
 }
