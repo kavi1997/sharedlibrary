@@ -1,7 +1,7 @@
 import groovy.json.JsonSlurper 
 
 @NonCPS
-createRepo(String data){
+exeStage(String data){
 def jsonSlurper = new JsonSlurper() 
 def resultJson = jsonSlurper.parseText(data)
 def name = resultJson.stage
@@ -25,5 +25,5 @@ httpRequest authentication: 'bamboo', contentType: "APPLICATION_JSON",
 }
 def call(){
 def request = libraryResource 'bamboo.json'
-createRepo(request)
+exeStage(request)
 }
