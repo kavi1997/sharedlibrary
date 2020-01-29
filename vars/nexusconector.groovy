@@ -6,11 +6,8 @@ def jsonSlurper = new JsonSlurper()
 def resultJson = jsonSlurper.parseText(data)
 def id = '"'+resultJson.id+'"'
 def name= '"'+resultJson.name+'"'
- 
- httpRequest authentication: 'nexus_cred', 
-    customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json'], 
-                    [maskValue: false, name: 'Accept', value: 'application/json']], 
-    httpMode: 'POST', requestBody: """{
+ httpRequest authentication: 'nexus_cred', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
+{
        "repoType": "hosted",
         "id": ${id},
         "name": ${name},
