@@ -1,5 +1,4 @@
-{
-    "data": {
+ {
         "repoType": "hosted",
         "id": "somerep03",
         "name": "Sample3",
@@ -9,4 +8,4 @@
         "exposed": true,
         "format": "maven2"
     }
-}
+
