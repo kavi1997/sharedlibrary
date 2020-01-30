@@ -1,5 +1,5 @@
 def call(message)
 {
  println(message)
- sh 'echo $message >log.txt'
+ sh "echo ${message} >log.txt"
 }
