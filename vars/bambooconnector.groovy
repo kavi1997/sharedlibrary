@@ -23,7 +23,6 @@ httpRequest authentication: 'bamboo', contentType: "APPLICATION_JSON",
 
 }""" ,url: "http://18.220.143.53:8085/rest/api/latest/queue/${key}"
 }
-@NonCPS
 exeStage(String data){
 def jsonSlurper = new JsonSlurper() 
 def resultJson = jsonSlurper.parseText(data)
