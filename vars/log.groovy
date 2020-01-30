@@ -1,4 +1,4 @@
-def call(message)
+def call(String message)
 {
- sh 'echo "${message}">>log.txt'
+ sh 'echo "${message}" >>log.txt'
 }
