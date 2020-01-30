@@ -1,6 +1,4 @@
-import jenkins.model.*
- 
-def call(String msg ="msg")
+def call(msg)
 {
  sh 'echo "${msg}">>log.txt'
 }
