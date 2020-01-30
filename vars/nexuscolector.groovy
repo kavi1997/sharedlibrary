@@ -8,7 +8,7 @@ def resultJson = jsonSlurper.parseText(data)
 def rid = resultJson.id
 //def projUrl = resultJson.url
 
-httpRequest authentication: 'nexus_cred', Accept: "APPLICATION_JSON",contentType: "APPLICATION_JSON", 
+httpRequest authentication: 'nexus_cred', "Accept: APPLICATION_JSON",contentType: "APPLICATION_JSON", 
     
     httpMode: 'GET', url: "http://3.15.18.214:8081/nexus/service/local/repositories/${rid}"
 }
