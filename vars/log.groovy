@@ -1,4 +1,4 @@
 def call(String msg="msg")
 {
-sh 'echo "${msg}">>log.txt'
+sh 'echo ""${msg}"">>log.txt'
 }
