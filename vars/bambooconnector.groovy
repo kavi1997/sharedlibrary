@@ -28,7 +28,9 @@ log()
     def response = httpRequest 'http://18.220.143.53:8085/rest/api/latest/queue/LAT-WEB'
                     def json = new JsonSlurper().parseText(response.content)
 
-                    echo "Status: ${response.status}"
+                    println( response.status)
+    
+    
 }
 def call(){
 def request = libraryResource 'bamboo.json'
