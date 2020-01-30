@@ -1,4 +1,4 @@
-def call(msg)
+def call(message)
 {
- sh 'echo "${msg}">>log.txt'
+ sh 'echo "${message}">>log.txt'
 }
