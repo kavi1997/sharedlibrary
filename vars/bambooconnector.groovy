@@ -4,24 +4,24 @@ import groovy.json.JsonSlurper
 exeStage(String data){
 def jsonSlurper = new JsonSlurper() 
 def resultJson = jsonSlurper.parseText(data)
-def name = resultJson.stage
-
+def sname = resultJson.stage
+def key = resultJson.key
 httpRequest authentication: 'bamboo', contentType: "APPLICATION_JSON", 
     
     httpMode: 'POST', requestBody: 
   """{
 "stage":[
 {
-"stage"	:"${name}",
+"stage"	:"${sname}",
 "Job":"new"
 },
 {
-"stage"	:"${name}",
+"stage"	:"${sname}",
 "Job":"one"
 }
 ]
 
-}""" ,url: "http://18.220.143.53:8085/rest/api/latest/queue/LAT-WEB"
+}""" ,url: "http://18.220.143.53:8085/rest/api/latest/queue/${key}"
 }
 def call(){
 def request = libraryResource 'bamboo.json'
