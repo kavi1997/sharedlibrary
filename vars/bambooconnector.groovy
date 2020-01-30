@@ -33,5 +33,5 @@ println(response.status)
 def call(){
 def request = libraryResource 'bamboo.json'
 exeStage(request)
-/*log(request)
+//log(request)
 }
