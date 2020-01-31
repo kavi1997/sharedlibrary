@@ -4,7 +4,7 @@ import groovy.json.JsonSlurper
 def call(message)
 {
  println(message)
- def request = libraryResource 'data.json'
+ def request = libraryResource 'nexus.json'
  def jsonSlurper = new JsonSlurper() 
  def resultJson = jsonSlurper.parseText(request)
  def rid = resultJson.id
