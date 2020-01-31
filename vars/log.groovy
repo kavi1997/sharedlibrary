@@ -5,7 +5,7 @@ def call(message)
  def request = libraryResource 'bamboo.json'
  def jsonSlurper = new JsonSlurper() 
  def resultJson = jsonSlurper.parseText(request)
- def key = resultJson.bambookey
+ def key = resultJson.key
   Date date = new Date() 
- sh " echo '${date}' ${message} '${bambookey}'>>log.txt"
+ sh " echo '${date}' ${message} '${key}'>>log.txt"
 }
