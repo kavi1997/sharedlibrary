@@ -9,5 +9,5 @@ def call(message)
  def resultJson = jsonSlurper.parseText(request)
  def rid = resultJson.id
   Date date = new Date() 
-  sh " echo '${date}' JIRA project with the projectname '${rid}' ${message} >>log.txt"
+  sh " echo '${date}' Nexus project with the repoid '${rid}' ${message} >>log.txt"
 }
