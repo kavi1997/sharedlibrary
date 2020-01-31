@@ -18,7 +18,7 @@ httpRequest authentication: 'bitbucket', contentType: 'APPLICATION_JSON', custom
 
 
 def call(){
-def request = libraryResource 'data.json'
+def request = libraryResource 'bitbucket.json'
 createRepo(request)
 
 
