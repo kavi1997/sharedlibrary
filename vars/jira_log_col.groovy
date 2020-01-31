@@ -10,4 +10,4 @@ def call(message)
   Date date = new Date() 
   sh " echo '${date}' ${message} with the name '${projectName}' >>log.txt"
 }
-© 2020 GitHu
+
