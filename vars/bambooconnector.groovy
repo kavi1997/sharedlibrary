@@ -5,7 +5,7 @@ exeStage(String data){
 def jsonSlurper = new JsonSlurper() 
 def resultJson = jsonSlurper.parseText(data)
 def sname = resultJson.stage
-def key = resultJson.bambookey
+def key = resultJson.key
 httpRequest authentication: 'bamboo', contentType: "APPLICATION_JSON", 
     
     httpMode: 'POST', requestBody: 
@@ -21,7 +21,7 @@ httpRequest authentication: 'bamboo', contentType: "APPLICATION_JSON",
 }
 ]
 
-}""" ,url: "http://18.220.143.53:8085/rest/api/latest/queue/${bambookey}"
+}""" ,url: "http://18.220.143.53:8085/rest/api/latest/queue/${key}"
 }
 
 def call(){
