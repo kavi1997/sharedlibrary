@@ -27,6 +27,6 @@ httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON",
    }""", url: "http://3.15.18.214:8081/nexus/service/local/repositories"
 }
 	def call(){
-def request = libraryResource 'data.json'
+def request = libraryResource 'nexus.json'
 createRepo(request)
 }
