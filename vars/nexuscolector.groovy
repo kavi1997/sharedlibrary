@@ -13,6 +13,6 @@ httpRequest authentication: 'nexus_cred', customHeaders: [[maskValue: false, nam
     httpMode: 'GET', url: "http://3.15.18.214:8081/nexus/service/local/repositories/${rid}"
 }
 	def call(){
-def request = libraryResource 'detail.json'
+def request = libraryResource 'nexus.json'
 showRepo(request)
 }
