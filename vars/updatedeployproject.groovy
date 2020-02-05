@@ -1,5 +1,5 @@
-def call(jsondata){
-def jsonString = jsondata
+def call(JSON){
+def jsonString = JSON
 //println(jsonString)
 def jsonObj = readJSON text: jsonString
 println(jsonObj.ci)
