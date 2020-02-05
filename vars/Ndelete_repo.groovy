@@ -11,6 +11,6 @@ String repoid=b.replaceAll("\\[", "").replaceAll("\\]","");
 
 httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON", 
     
-    httpMode: 'DELETE', url: "http://3.15.18.214:8081/nexus/service/local/repositories/${repoid}",
+    httpMode: 'DELETE', url: "http://3.15.18.214:8081/nexus/service/local/repositories/${repoid}"
     
 }
