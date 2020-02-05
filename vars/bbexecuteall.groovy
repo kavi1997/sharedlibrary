@@ -20,7 +20,7 @@ httpRequest authentication: 'bamboo', contentType: 'APPLICATION_JSON', customHea
 	{
 "stage":[
 {
-"name":"stage:${sname}",
+"name":"${sname}",
 "Job":"${jname}"
 }
 ]
