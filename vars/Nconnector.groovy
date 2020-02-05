@@ -18,6 +18,14 @@ httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON",
 		
         "id": ${repoid},
         "name": ${repoName}
+        "repoType": "hosted",
+        "repoPolicy": "RELEASE",
+        "provider": "maven2",
+        "providerRole": "org.sonatype.nexus.proxy.repository.Repository",
+        "exposed": true,
+        "format": "maven2"
+}
+}
         
 	}
         
