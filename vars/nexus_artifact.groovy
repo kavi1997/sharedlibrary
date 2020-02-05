@@ -1,4 +1,4 @@
 def call()
 {
-sh 'curl -X GET -i -H  "Accept: application/json" -H "Content-Type: application/json" -u admin:admin123 "http://3.15.18.214:8081/nexus/service/local/artifact/maven/content?r=repo&g=Codekillers&a=dynamic_new&v=1.0&r=repo"'
+wget --user=admin --password=admin123 "http://3.15.18.214:8080/nexus/service/local/artifact/maven/content?g=Codekillers&a=dynamic_new&v=1.0&r=repo"
 }
