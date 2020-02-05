@@ -15,9 +15,9 @@ httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON",
   """{
     	"data":
 	{
-		"repoType": "hosted",
+		
         "id": ${repoid},
-        "name": ${repoName},
+        "name": ${repoName}
         
 	}
         
