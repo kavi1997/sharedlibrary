@@ -20,12 +20,10 @@ httpRequest authentication: 'bamboo', contentType: 'APPLICATION_JSON', customHea
 	{
 "stage":[
 {
-"name":"${sname}",
-"Job":"${jname}"
+"name":"Stage   :TestStage",
+"Job":"new"
 }
 ]
-
-}
 }
 }""", responseHandle: 'NONE', url:"http://18.220.143.53:8085/rest/api/latest/queue/${key}"
  }
