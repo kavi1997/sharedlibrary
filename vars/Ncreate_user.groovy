@@ -18,8 +18,8 @@ String g=jsonObj.brm.user.password
 String pwd=g.replaceAll("\\[", "").replaceAll("\\]","");
 String f=jsonObj.brm.user.firstname
 String fn=f.replaceAll("\\[", "").replaceAll("\\]","");
-	println(repoName)
-	println(repoid)
+	println(userid)
+	println()
 	
 
 httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON", 
