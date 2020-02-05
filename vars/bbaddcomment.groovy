@@ -5,7 +5,7 @@ println(jsonObj.ci)
 
 String a=jsonObj.ci.label.content
 String comment=a.replaceAll("\\[", "").replaceAll("\\]","");
-String b=jsonObj.ci.project-plankey.key
+String b=jsonObj.ci.projectplankey.key
 String key=b.replaceAll("\\[", "").replaceAll("\\]","");
 String c=jsonObj.ci.Build.buildNumber
 String bno=b.replaceAll("\\[", "").replaceAll("\\]","");
