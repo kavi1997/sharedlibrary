@@ -4,7 +4,7 @@ def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
 println(jsonObj.brm)
 
-String a=jsonObj.brm.password.oldpassword
+String a=jsonObj.brm.password.oldPassword
 String oldpass=a.replaceAll("\\[", "").replaceAll("\\]","");
 String b=jsonObj.brm.password.userId
 String userid=b.replaceAll("\\[", "").replaceAll("\\]","");
