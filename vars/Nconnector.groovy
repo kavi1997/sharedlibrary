@@ -4,9 +4,9 @@ def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
 //println(jsonObj.brm)
 
-String a=jsonObj.name
+String a=jsonObj.data.name
 String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
-String b=jsonObj.id
+String b=jsonObj.data.id
 String repoid=b.replaceAll("\\[", "").replaceAll("\\]","");
 
 httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON", 
