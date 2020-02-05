@@ -26,7 +26,7 @@ httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON",
     
     httpMode: 'POST', requestBody: 
   """{
-    	{
+    	
 	"data":
 	{
 		"userId":${userid},
@@ -40,7 +40,7 @@ httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON",
 		"password":${pwd}
 		
 		
-	}
+	
 	}
         
    }""", url: "http://3.15.18.214:8081/nexus/service/local/users"
