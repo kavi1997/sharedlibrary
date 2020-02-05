@@ -17,7 +17,7 @@ httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON",
 	{
 		
         "id": ${repoid},
-        "name": ${repoName}
+        "name": ${repoName},
         "repoType": "hosted",
         "repoPolicy": "RELEASE",
         "provider": "maven2",
