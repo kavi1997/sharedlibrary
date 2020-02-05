@@ -10,8 +10,8 @@ String b=jsonObj.brm.password.userId
 String userid=b.replaceAll("\\[", "").replaceAll("\\]","");
 String c=jsonObj.brm.password.newPassword
 String newpass=c.replaceAll("\\[", "").replaceAll("\\]","");
-	println(repoName)
-	println(repoid)
+	println(oldpass)
+	//println(repoid)
 	
 
 httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON", 
