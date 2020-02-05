@@ -2,11 +2,11 @@ def call(jsondata){
 def jsonString = jsondata
 //println(jsonString)
 def jsonObj = readJSON text: jsonString
-//println(jsonObj.brm)
+println(jsonObj.brm)
 
-String a=jsonObj.data.name
+String a=jsonObj.brm.tool.repositories.repository.name
 String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
-String b=jsonObj.data.id
+String b=jsonObj.brm.tool.repositories.repository.id
 String repoid=b.replaceAll("\\[", "").replaceAll("\\]","");
 
 httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON", 
