@@ -4,9 +4,9 @@ def jsonString = JSON
 def jsonObj = readJSON text: jsonString
 println(jsonObj.ci)
 
-String a=jsonObj.ci.version.environmentId
+String a=jsonObj.ci.id.environmentId
 String eid=a.replaceAll("\\[", "").replaceAll("\\]","");
-String b=jsonObj.ci.version.versionId
+String b=jsonObj.ci.id.versionId
 String vid=b.replaceAll("\\[", "").replaceAll("\\]","");
 println(eid)
 println(vid)
