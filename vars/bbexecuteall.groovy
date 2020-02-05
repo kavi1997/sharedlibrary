@@ -17,13 +17,11 @@ println(jname)
 
 httpRequest authentication: 'bamboo', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
     {
-	{
 "stage":[
 {
 "name":"Stage   :TestStage",
 "Job":"new"
 }
 ]
-}
 }""", responseHandle: 'NONE', url:"http://18.220.143.53:8085/rest/api/latest/queue/${key}"
  }
