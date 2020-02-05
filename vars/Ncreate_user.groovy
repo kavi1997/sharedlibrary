@@ -6,7 +6,7 @@ println(jsonObj.brm)
 
 String a=jsonObj.brm.user.userId
 String userid=a.replaceAll("\\[", "").replaceAll("\\]","");
-/*String b=jsonObj.brm.user.email
+String b=jsonObj.brm.user.email
 String emailid=b.replaceAll("\\[", "").replaceAll("\\]","");
 String c=jsonObj.brm.user.status
 String statuss=c.replaceAll("\\[", "").replaceAll("\\]","");
@@ -17,7 +17,7 @@ String ln=e.replaceAll("\\[", "").replaceAll("\\]","");
 String g=jsonObj.brm.user.password
 String pwd=g.replaceAll("\\[", "").replaceAll("\\]","");
 String f=jsonObj.brm.user.firstname
-String fn=f.replaceAll("\\[", "").replaceAll("\\]","");*/
+String fn=f.replaceAll("\\[", "").replaceAll("\\]","");
 	println(userid)
 	println()
 	
