@@ -1,5 +1,5 @@
 def call()
 {
-//sh "wget --user=admin --password=admin123 'http://3.15.18.214:8081/nexus/service/local/repositories/repo/content/dynamic_new-1.0.war' "
- curl -X GET -u admin:admin123 "http://3.15.18.214:8081/nexus/service/local/repositories/repo/content/dynamic_new-1.0.war"
+sh "wget --user=admin --password=admin123 'http://3.15.18.214:8081/nexus/service/local/repositories/repo/content/dynamic_new-1.0.war' "
+ //curl -X GET -u admin:admin123 "http://3.15.18.214:8081/nexus/service/local/repositories/repo/content/dynamic_new-1.0.war"
 }
