@@ -6,10 +6,13 @@ println(jsonObj.ci)
 
 String a=jsonObj.ci.deploy.name
 String name=a.replaceAll("\\[", "").replaceAll("\\]","");
-String b=jsonObj.ci.deploy.key
+String b=jsonObj.ci.project-plankey.key
 String key=b.replaceAll("\\[", "").replaceAll("\\]","");
+String c=jsonObj.id.deploymentProjectId
+String did=b.replaceAll("\\[", "").replaceAll("\\]","");
 println(name)
 println(key)
+println(did)
 
 httpRequest authentication: 'bamboo', contentType: 'APPLICATION_JSON', customHeaders: [[maskValue: false, name: 'Content-Type', value: 'application/json']], httpMode: 'POST', requestBody: """
 {
@@ -20,6 +23,6 @@ httpRequest authentication: 'bamboo', contentType: 'APPLICATION_JSON', customHea
 
 }
     
-}""", responseHandle: 'NONE', url:"http://18.220.143.53:8085/rest/api/latest/deploy/project/5767169"
+}""", responseHandle: 'NONE', url:"http://18.220.143.53:8085/rest/api/latest/deploy/project/${did}"
   
   }
