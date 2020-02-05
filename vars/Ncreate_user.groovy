@@ -10,8 +10,8 @@ String b=jsonObj.brm.user.email
 String emailid=b.replaceAll("\\[", "").replaceAll("\\]","");
 String c=jsonObj.brm.user.status
 String statuss=c.replaceAll("\\[", "").replaceAll("\\]","");
-String d=jsonObj.brm.user.roles.role
-String rolee=d.replaceAll("\\[", "").replaceAll("\\]","");
+//String d=jsonObj.brm.user.roles.role
+//String rolee=d.replaceAll("\\[", "").replaceAll("\\]","");
 String e=jsonObj.brm.user.lastName
 String ln=e.replaceAll("\\[", "").replaceAll("\\]","");
 String g=jsonObj.brm.user.password
@@ -34,7 +34,7 @@ httpRequest authentication: 'nexus_cred', contentType: "APPLICATION_JSON",
 		"status":${statuss},
 		"firstName":${fn},
 		"roles":{
-			"role":${rolee}
+			"role":"repository-any-read"
 		},
 		"lastName":${ln},
 		"password":${pwd}
