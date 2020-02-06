@@ -6,7 +6,7 @@ println(jsonObj.ci)
 
 String a=jsonObj.ci.deploy.name
 String name=a.replaceAll("\\[", "").replaceAll("\\]","");
-String b=jsonObj.ci.project-plankey.key
+String b=jsonObj.ci.projectplankey.key
 String key=b.replaceAll("\\[", "").replaceAll("\\]","");
 String c=jsonObj.id.deploymentProjectId
 String did=b.replaceAll("\\[", "").replaceAll("\\]","");
