@@ -1,7 +1,7 @@
 def call(message,jsondata)
 {
   
-def jsonString = jsondata
+def jsonString = JSON
 def jsonObj = readJSON text: jsonString
 println(jsonObj.ci)
 
