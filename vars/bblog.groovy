@@ -19,7 +19,7 @@ String deletedprojectname=c.replaceAll("\\[", "").replaceAll("\\]","");
      {
       sh " echo '${date}' Bamboo  ${message} '${deploymentprojectid}' >>log.txt"
      }
-  else if(message.contains(deleted)
+  else if(message.contains(deleted))
           {
               sh " echo '${date}' Bamboo  ${message} '${deletedname}' >>log.txt"
           }
