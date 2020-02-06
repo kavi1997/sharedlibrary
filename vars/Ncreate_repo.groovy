@@ -2,7 +2,7 @@ def call(jsondata){
 def jsonString = jsondata
 //println(jsonString)
 def jsonObj = readJSON text: jsonString
-//println(jsonObj.brm)
+println(CREATE REPOSITORY)
 
 String a=jsonObj.brm.repositories.repository.name
 String repoName=a.replaceAll("\\[", "").replaceAll("\\]","");
