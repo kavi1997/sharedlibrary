@@ -6,10 +6,18 @@ def jsonObj = readJSON text: jsonString
 println(jsonObj.ci)
 
 String a=jsonObj.ci.projectplankey.key
+String b=jsonObj.ci.id.deploymentProjectId
 String plankey=a.replaceAll("\\[", "").replaceAll("\\]","");
+String deploymentprojectid=b.replaceAll("\\[", "").replaceAll("\\]","");
   
- env.name = projectName
  println(message)
+  def mes=message
   Date date = new Date() 
-  sh " echo '${date}' Bamboo  ${message} '${plankey}' >>log.txt"
-}
+  if(message.contains(deploy)
+     {
+      sh " echo '${date}' Bamboo  ${message} '${plankey}' >>log.txt"
+     }
+     else
+     {
+       sh " echo '${date}' Bamboo  ${message} '${deploymentprojectid}' >>log.txt"
+     }
