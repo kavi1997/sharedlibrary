@@ -5,11 +5,11 @@ def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
 println(jsonObj.alm)
 
-String a=jsonObj.brm.repositories.repository.name
-String projectName=a.replaceAll("\\[", "").replaceAll("\\]","");
+String a=jsonObj.brm.repositories.repository.id
+String rid=a.replaceAll("\\[", "").replaceAll("\\]","");
   
- env.name = projectName
+ env.name = rid
  println(message)
   Date date = new Date() 
-  sh " echo '${date}' NEXUS '${projectName}' ${message} >>log.txt"
+  sh " echo '${date}' NEXUS '${rid}' ${message} >>log.txt"
 }
