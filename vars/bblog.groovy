@@ -27,3 +27,4 @@ String deletedprojectname=c.replaceAll("\\[", "").replaceAll("\\]","");
      {
        sh " echo '${date}' Bamboo  ${message} '${plankey}' >>log.txt"
      }
+}
