@@ -3,13 +3,13 @@ def call(message,jsondata)
   
 def jsonString = jsondata
 def jsonObj = readJSON text: jsonString
-println(jsonObj.alm)
+println(jsonObj.ci)
 
-String a=jsonObj.alm.projects.project.project_name
-String projectName=a.replaceAll("\\[", "").replaceAll("\\]","");
+String a=jsonObj.ci.projectplankey.key
+String plankey=a.replaceAll("\\[", "").replaceAll("\\]","");
   
  env.name = projectName
  println(message)
   Date date = new Date() 
-  sh " echo '${date}' JIRA '${projectName}' ${message} >>log.txt"
+  sh " echo '${date}' Bamboo  ${message} '${plankey}' >>log.txt"
 }
