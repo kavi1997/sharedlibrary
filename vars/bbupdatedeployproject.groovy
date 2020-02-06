@@ -9,7 +9,7 @@ String name=a.replaceAll("\\[", "").replaceAll("\\]","");
 String b=jsonObj.ci.projectplankey.key
 String key=b.replaceAll("\\[", "").replaceAll("\\]","");
 String c=jsonObj.id.deploymentProjectId
-String did=b.replaceAll("\\[", "").replaceAll("\\]","");
+String did=c.replaceAll("\\[", "").replaceAll("\\]","");
 println(name)
 println(key)
 println(did)
