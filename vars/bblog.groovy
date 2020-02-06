@@ -13,7 +13,7 @@ String deploymentprojectid=b.replaceAll("\\[", "").replaceAll("\\]","");
  println(message)
   def mes=message
   Date date = new Date() 
-  if(message.contains(deploy)
+  if(message.contains(deploy))
      {
       sh " echo '${date}' Bamboo  ${message} '${plankey}' >>log.txt"
      }
