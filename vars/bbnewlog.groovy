@@ -9,14 +9,11 @@ String a=jsonObj.ci.projectplankey.key
 String plankey=a.replaceAll("\\[", "").replaceAll("\\]","");
 String b=jsonObj.ci.id.deploymentProjectId
 String deploymentprojectid=b.replaceAll("\\[", "").replaceAll("\\]","");
-
-
-String deletedprojectname=c.replaceAll("\\[", "").replaceAll("\\]","");
   
  println(message)
   def mes="deployment"
   Date date = new Date() 
-  if ( message.toLowerCase().indexOf(mes.toLowerCase()) != -1 ) {
+  if ( message.toLowerCase().indexOf(mes.toLowerCase()) != -1 ) 
 
 {
       sh " echo '${date}' Bamboo  ${message} '${deploymentprojectid}' >>log.txt"
