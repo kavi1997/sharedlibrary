@@ -1,4 +1,4 @@
-def call(message,jsondata)
+def call(message)
 {
   
 def jsonString = jsondata
