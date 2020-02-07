@@ -1,12 +1,18 @@
-def call(message)
+def call(message,JSON)
 {
   
+def jsonString = JSON
+def jsonObj = readJSON text: jsonString
+println(jsonObj.ci)
 
- println(message)
- 
-  Date date = new Date() 
+
+String a=jsonObj.ci.projectplankey.key
+String plankey=a.replaceAll("\\[", "").replaceAll("\\]","");
   
-      sh " echo '${date}' Bamboo  ${message}  >>log.txt"
-   
+ println(message)
+  Date date = new Date() 
+ 
+      sh " echo '${date}' Bamboo  ${message} '${plankey}' >>log.txt"
+    
+     
 }
-
