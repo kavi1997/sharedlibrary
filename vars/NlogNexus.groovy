@@ -11,5 +11,5 @@ String rid=a.replaceAll("\\[", "").replaceAll("\\]","");
  env.name = rid
  //println(message)
   Date date = new Date() 
-  sh " echo '${date}' NEXUS '${rid}' ${message} >>log.txt"
+  sh " echo '${date}' NEXUS ${message} >>log.txt"
 }
