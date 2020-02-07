@@ -9,7 +9,6 @@ String a=jsonObj.ci.projectplankey.key
 String plankey=a.replaceAll("\\[", "").replaceAll("\\]","");
 String b=jsonObj.ci.id.deploymentProjectId
 String deploymentprojectid=b.replaceAll("\\[", "").replaceAll("\\]","");
-String c=jsonObj.ci.projectkey.key
 
 
 String deletedprojectname=c.replaceAll("\\[", "").replaceAll("\\]","");
