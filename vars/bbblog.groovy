@@ -10,7 +10,7 @@ String a=jsonObj.ci.id.deploymentProjectId
 String deploymentprojectid=a.replaceAll("\\[", "").replaceAll("\\]","");
   
  println(message)
-  def mes="deployment"
+ 
   Date date = new Date() 
  
       sh " echo '${date}' Bamboo  ${message} '${deploymentprojectid}' >>log.txt"
