@@ -1,7 +1,7 @@
-def call(message)
+def call(tool,message)
 {
   println(message)
   Date date = new Date() 
  
-      sh " echo '${date}'  ${message} >> log.txt"
+  sh " echo '${date}' ${tool}  ${message} >> log.txt"
 }
